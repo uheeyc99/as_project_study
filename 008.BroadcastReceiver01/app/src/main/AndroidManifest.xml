@@ -16,6 +16,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <receiver android:name="com.andrew.eric.a008broadcastreceiver01.receiver.EricReceiver">
+            <intent-filter>
+                <action android:name="eric_broad_action1"></action> 
+                <action android:name="eric_broad_action2"></action>
+                <action android:name="eric_broad_action3"></action>
+            </intent-filter>
+        </receiver>
+
+
     </application>
 
 </manifest>
