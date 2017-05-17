@@ -31,6 +31,9 @@ public class MainActivity extends AppCompatActivity {
             intent2.putExtra("Gender","Female");
             sendBroadcast(intent2);
 
+            Intent intent3 = new Intent();
+            intent3.setAction("ERIC_ACTIPON_03");
+            sendBroadcast(intent3);
 
         }
     };
