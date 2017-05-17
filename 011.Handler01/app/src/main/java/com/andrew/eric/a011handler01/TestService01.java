@@ -6,7 +6,7 @@ import android.os.Handler;
 import android.os.IBinder;
 import android.os.Looper;
 import android.os.Message;
-import android.support.annotation.IntDef;
+
 import android.util.Log;
 
 public class TestService01 extends Service {
