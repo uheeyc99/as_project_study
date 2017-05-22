@@ -1,0 +1,2 @@
+1.MainActivity调用主页面布局文件
+2.主布局文件里通过fragment的“android:name”启动了fragment类

@@ -14,8 +14,8 @@
         android:layout_below="@id/id_fragment_title"
         android:id="@+id/id_fragment_content"
         android:name="com.andrew.eric.a061fragment01.ContentFragment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
 
 
 
