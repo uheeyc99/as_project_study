@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/011.Handler02Thread.iml" filepath="$PROJECT_DIR$/011.Handler02Thread.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$USER_HOME$/.work/as_project_study/011.Handler02Thread/011.Handler02Thread.iml" filepath="$USER_HOME$/.work/as_project_study/011.Handler02Thread/011.Handler02Thread.iml" />
+      <module fileurl="file://$USER_HOME$/.work/as_project_study/011.Handler02Thread/app/app.iml" filepath="$USER_HOME$/.work/as_project_study/011.Handler02Thread/app/app.iml" />
     </modules>
   </component>
 </project>

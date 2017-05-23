@@ -7,8 +7,8 @@
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="modules">
           <set>
-            <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/app" />
+            <option value="$USER_HOME$/.work/as_project_study/011.Handler02Thread" />
+            <option value="$USER_HOME$/.work/as_project_study/011.Handler02Thread/app" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
