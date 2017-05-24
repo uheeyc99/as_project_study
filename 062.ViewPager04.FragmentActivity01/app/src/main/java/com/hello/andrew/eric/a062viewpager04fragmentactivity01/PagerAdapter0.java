@@ -15,7 +15,7 @@ public class PagerAdapter0 extends FragmentPagerAdapter {
     List<Fragment> fragmentList;
     FragmentManager fm;
 
-    public PagerAdapter0(FragmentManager fm0,List<Fragment> lf) {
+    public PagerAdapter0(FragmentManager fm0, List<Fragment> lf) {
         super(fm0);
         fm = fm0;
         fragmentList = lf;
@@ -23,11 +23,9 @@ public class PagerAdapter0 extends FragmentPagerAdapter {
     }
 
 
-
-    
-
     @Override
     public int getCount() {
+
         return fragmentList.size();
     }
 
