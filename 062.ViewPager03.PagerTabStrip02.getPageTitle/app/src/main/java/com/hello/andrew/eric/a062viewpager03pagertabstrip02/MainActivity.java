@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         vHolder = new vHolder();
         vHolder.tlist = new ArrayList<String>();
         vHolder.vlist = new ArrayList<View>();
-
+        vHolder.context=this;
 
         vHolder.vlist.add(page01);
         vHolder.vlist.add(page02);

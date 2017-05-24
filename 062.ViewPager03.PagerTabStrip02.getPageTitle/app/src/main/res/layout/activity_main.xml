@@ -8,13 +8,15 @@
 
     <android.support.v4.view.ViewPager
         android:id="@+id/viewpager0"
+        android:layout_gravity="center"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <!--    此处注意 android:layout_height的值    !-->
         <android.support.v4.view.PagerTabStrip
             android:id="@+id/tab0"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="80dip"
             android:layout_gravity="top"
             >
 

@@ -1,5 +1,6 @@
 package com.hello.andrew.eric.a062viewpager03pagertabstrip02;
 
+import android.content.Context;
 import android.view.View;
 
 import java.util.List;
@@ -12,5 +13,5 @@ public class vHolder {
 
     List<View> vlist;
     List<String> tlist;
-    Object object;
+    Context context;
 }
