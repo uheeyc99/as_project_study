@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <!--stretchColumns  第0列填充空白区域-->
+    <TableLayout
+        android:collapseColumns="2"
+        android:stretchColumns="0"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow
+            android:background="#aaaaaa"
+            android:layout_width="match_parent"
+            android:layout_height="300dp" >
+            <TextView
+                android:id="@+id/textView01"
+                android:layout_gravity="left"
+                android:background="#aaffaa"
+                android:textSize="55dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="0" />
+            <RatingBar
+                android:id="@+id/ratingBar01"
+                android:background="#666666"
+                android:gravity="right"
+                android:rating="1"
+                android:numStars="5"
+                android:stepSize="0.5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </TableRow>
+
+        <TableRow
+            android:background="#ee77ff"
+            android:layout_width="match_parent"
+            android:layout_height="55dp" >
+            <TextView
+                android:id="@+id/textView02"
+                android:layout_gravity="left"
+                android:background="#aaffaa"
+                android:textSize="55dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="1" />
+            <RatingBar
+                android:id="@+id/ratingBar02"
+                android:background="#666666"
+                android:gravity="right"
+                android:rating="1"
+                android:numStars="5"
+                style="@style/Base.Widget.AppCompat.RatingBar.Indicator"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </TableRow>
+
+        <TableRow
+            android:background="#aaaaaa"
+            android:layout_width="match_parent"
+            android:layout_height="55dp" >
+            <TextView
+                android:id="@+id/textView03"
+                android:layout_gravity="left"
+                android:background="#aaffaa"
+                android:textSize="55dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="2" />
+            <RatingBar
+                android:id="@+id/ratingBar03"
+                android:background="#666666"
+                android:gravity="right"
+                android:rating="1"
+                android:numStars="5"
+                style="@style/Base.Widget.AppCompat.RatingBar.Small"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </TableRow>
+
+    </TableLayout>
+</LinearLayout>
