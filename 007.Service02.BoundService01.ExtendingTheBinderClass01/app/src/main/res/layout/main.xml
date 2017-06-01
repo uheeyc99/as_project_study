@@ -7,11 +7,14 @@
         android:id="@+id/button1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:text="操作" />
 
-    <Button
-        android:id="@+id/button2"
+    <TextView
+        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:textSize="28dp"
+        android:text="TextView" />
+
+
 </LinearLayout>
