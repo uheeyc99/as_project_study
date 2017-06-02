@@ -20,6 +20,7 @@ import okhttp3.Response;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     Button btn;
     TextView tv;
+    String urlString = "http://192.168.56.101";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,7 +44,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void run() {
                 OkHttpClient client = new OkHttpClient();
                 try {
-                    Request request = new Request.Builder().url("http://www.sina.com").build();
+                    Request request = new Request.Builder().url(urlString).build();
                     Response response = client.newCall(request).execute();
                     String responseData = response.body().string();
                     showResponse(responseData);
@@ -64,7 +65,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 HttpURLConnection connection = null;
                 BufferedReader reader = null;
                 try {
-                    URL url = new URL("https://www.baidu.com");
+                    URL url = new URL(urlString);
                     connection = (HttpURLConnection) url.openConnection();
                     connection.setRequestMethod("GET");
                     connection.setConnectTimeout(8000);
