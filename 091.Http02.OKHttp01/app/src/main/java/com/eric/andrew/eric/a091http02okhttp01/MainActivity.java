@@ -13,6 +13,10 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     Button btn;
     TextView tv;
@@ -29,7 +33,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        sendRequestWithHttpURLConnection();
+//        sendRequestWithHttpURLConnection();
+        sendRequestWithOkHttp();
+    }
+
+    private void sendRequestWithOkHttp() {
+        Runnable r = new Runnable() {
+            @Override
+            public void run() {
+                OkHttpClient client = new OkHttpClient();
+                try {
+                    Request request = new Request.Builder().url("http://www.sina.com").build();
+                    Response response = client.newCall(request).execute();
+                    String responseData = response.body().string();
+                    showResponse(responseData);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        };
+
+        Thread t = new Thread(r);
+        t.start();
     }
 
     private void sendRequestWithHttpURLConnection() {
@@ -38,8 +63,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void run() {
                 HttpURLConnection connection = null;
                 BufferedReader reader = null;
-
-                ;
                 try {
                     URL url = new URL("https://www.baidu.com");
                     connection = (HttpURLConnection) url.openConnection();
