@@ -12,7 +12,7 @@ import java.net.URL;
 
 public class AndrewHttpUtil01 {
     public static String sendHttpRequest(String address){
-        return sendHttpRequest(address);
+        return sendHttpRequest0(address);
     }
     public static String sendHttpRequest0(String address){
         HttpURLConnection connection = null;

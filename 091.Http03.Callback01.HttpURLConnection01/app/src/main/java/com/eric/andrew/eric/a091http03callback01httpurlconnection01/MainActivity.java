@@ -32,8 +32,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
 
-//        runRequest1();
-        runRequest2();
+        runRequest1();
+//        runRequest2();
     }
 
     public void runRequest1(){
