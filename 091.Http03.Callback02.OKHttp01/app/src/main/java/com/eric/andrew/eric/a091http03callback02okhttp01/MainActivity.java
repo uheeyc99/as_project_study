@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public void request1(){
         Runnable r = new Runnable() {
+
             @Override
             public void run() {
                 AndrewHttpUtil01 andrewHttpUtil01 = new AndrewHttpUtil01();
@@ -64,6 +65,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     okhttp3.Callback callback = new okhttp3.Callback() {
         @Override
         public void onFailure(Call call, IOException e) {
+
             showResponse(e.toString());
         }
 
@@ -90,6 +92,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void run() {
                 tv.setText(responseData);
+
             }
         });
 

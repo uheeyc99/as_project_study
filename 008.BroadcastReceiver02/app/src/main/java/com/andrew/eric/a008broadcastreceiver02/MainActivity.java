@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     View.OnClickListener listener1 = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
+            //注册
             IntentFilter intentFilter = new IntentFilter();
             intentFilter.addAction("ERIC_ACTIPON_02");
             registerReceiver(rec,intentFilter);
@@ -40,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
     View.OnClickListener listener2 = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
+            //注销
             unregisterReceiver(rec);
         }
     };
