@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
+
     private List<Fruit> fruitList = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,15 +23,19 @@ public class MainActivity extends AppCompatActivity {
 
         initFruits();
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycle_view);
+
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
+
         FruitAdapter adapter = new FruitAdapter(fruitList);
         recyclerView.setAdapter(adapter);
+
     }
 
 
 
     private void initFruits(){
+
         Fruit apple =new Fruit("Apple",R.mipmap.ic_launcher_round);
         fruitList.add(apple);
         Fruit banana = new Fruit("Banana",R.mipmap.ic_launcher_round);
@@ -38,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
         fruitList.add(apple);
         fruitList.add(banana);
+
     }
 
     public class Fruit{
@@ -46,17 +52,22 @@ public class MainActivity extends AppCompatActivity {
         private int imageId;
 
         public Fruit(String name,int imageId) {
+
             this.name =name;
             this.imageId=imageId;
 
         }
 
         public String getName() {
+
             return name;
+
         }
 
         public int getImageId() {
+
             return imageId;
+
         }
 
     }
