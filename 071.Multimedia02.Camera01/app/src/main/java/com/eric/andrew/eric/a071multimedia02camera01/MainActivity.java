@@ -1,7 +1,7 @@
 package com.eric.andrew.eric.a071multimedia02camera01;
 
 import android.Manifest;
-import android.annotation.TargetApi;
+import android.app.Activity;
 import android.content.ContentUris;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -12,10 +12,6 @@ import android.net.Uri;
 import android.os.Build;
 import android.provider.DocumentsContract;
 import android.provider.MediaStore;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
-import android.support.v4.content.FileProvider;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -27,7 +23,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
     Button takePhoto,chosePhoto;
     Uri imageUri;
     ImageView picture;
@@ -97,8 +93,8 @@ public class MainActivity extends AppCompatActivity {
 
         switch (requestCode){
             case TAKE_PHOTO:
-                File outputImage = new File(getExternalCacheDir(),"output_image.jpg");
-                if(outputImage.exists()) {
+                File file = new File(getExternalCacheDir(),"output_image.jpg");
+                if(file.exists()) {
                     Toast.makeText(this, "缓存文件存在", Toast.LENGTH_SHORT).show();
                     try {
                         Bitmap bitmap = BitmapFactory.decodeStream(getContentResolver().openInputStream(imageUri));
@@ -137,6 +133,8 @@ public class MainActivity extends AppCompatActivity {
             //如果是document类型的Uri，则通过Document id处理
             String docID = DocumentsContract.getDocumentId(uri);
             if("com.android.providers.media.documents".equals(uri.getAuthority())){
+                Log.i("AAAAA","1");
+
 
                 String id = docID.split(":")[1];
                 String selection = MediaStore.Images.Media._ID + "=" + id; //解析出数字格式id
@@ -144,6 +142,8 @@ public class MainActivity extends AppCompatActivity {
 
             }else
             if("com.android.providers.downloads.documents".equals(uri.getAuthority())){
+                Log.i("AAAAA","2");
+
                 Uri contentUri = ContentUris.withAppendedId(Uri.parse("content://downloads/public_downloads"),Long.valueOf(docID));
                 imagePath = getImagePath(contentUri,null);
             }
@@ -151,6 +151,8 @@ public class MainActivity extends AppCompatActivity {
         }else if("content".equalsIgnoreCase(uri.getScheme())){
             //如果是content类型的Uri，则用普通方式处理
             imagePath= getImagePath(uri,null);
+            Log.i("AAAAA","3");
+
         }else if("file".equalsIgnoreCase(uri.getScheme())){
             //如果是file类型的Uri,直接获取图片路径即可
             imagePath=uri.getPath();
@@ -189,8 +191,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
-
-
 
 }
 
