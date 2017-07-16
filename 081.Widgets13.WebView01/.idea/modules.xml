@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/081.Widgets13.WebView01.iml" filepath="$PROJECT_DIR$/081.Widgets13.WebView01.iml" />
       <module fileurl="file://$USER_HOME$/.work/as_project_study/081.Widgets13.WebView01/081.Widgets13.WebView01.iml" filepath="$USER_HOME$/.work/as_project_study/081.Widgets13.WebView01/081.Widgets13.WebView01.iml" />
       <module fileurl="file://$USER_HOME$/.work/as_project_study/081.Widgets13.WebView01/081.Widgets13.WebView01.iml" filepath="$USER_HOME$/.work/as_project_study/081.Widgets13.WebView01/081.Widgets13.WebView01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$USER_HOME$/.work/as_project_study/081.Widgets13.WebView01/app/app.iml" filepath="$USER_HOME$/.work/as_project_study/081.Widgets13.WebView01/app/app.iml" />
       <module fileurl="file://$USER_HOME$/.work/as_project_study/081.Widgets13.WebView01/app/app.iml" filepath="$USER_HOME$/.work/as_project_study/081.Widgets13.WebView01/app/app.iml" />
     </modules>

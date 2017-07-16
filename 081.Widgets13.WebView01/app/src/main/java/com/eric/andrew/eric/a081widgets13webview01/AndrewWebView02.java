@@ -23,7 +23,7 @@ public class AndrewWebView02 extends Activity {
         setContentView(R.layout.webview02_layout);
         webView = (WebView) findViewById(R.id.webview2);
         webView.getSettings().setJavaScriptEnabled(true);
-        webView.loadUrl("https://www.baidu.com");
+        webView.loadUrl("https://192.168.88.105:8080");
 //        webView.setWebViewClient(new WebViewClient());
         webView.setWebViewClient(new AndrewWebViewClient());
     }
