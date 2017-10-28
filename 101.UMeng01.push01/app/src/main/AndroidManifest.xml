@@ -3,6 +3,7 @@
     package="com.example.eric.a101umeng01push01">
 
     <application
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -16,6 +17,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5975a1c4aed179167a00048b" />
+        <meta-data
+            android:name="UMENG_MESSAGE_SECRET"
+            android:value="8bf22a7c81e5f0b4fd6bb1e100578ca6" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="Umeng" />
     </application>
 
 </manifest>
